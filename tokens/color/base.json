@@ -1,6 +1,11 @@
 {
   "color": {
     "base": {
+      "green": {
+        "50": {
+          "value": "#e3f6ea"
+        }
+      },
       "red": {
         "50": {
           "value": "#fdebee"
