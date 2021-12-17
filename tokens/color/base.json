@@ -1,0 +1,24 @@
+{
+  "color": {
+    "base": {
+      "red": {
+        "50": {
+          "value": "#fdebee"
+        },
+        "100": {
+          "value": "#fbccd2"
+        }
+      },
+      "blue": {
+        "50": {
+          "value": "#e2f1fd",
+          "type": "color"
+        },
+        "100": {
+          "value": "#b9dcfb",
+          "type": "color"
+        }
+      }
+    }
+  }
+}

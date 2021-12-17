@@ -1,0 +1,53 @@
+import { Meta } from '@storybook/addon-docs';
+import tokens from '../../dist/tokens'
+const baseColors = tokens.color.base
+import {palette} from './baseColors'
+
+<Meta title="Tokens/Colors" />
+
+# Colors
+
+## Base
+
+<div style={{
+  display: 'grid',
+  gap: '1rem',
+  color: '#444'
+}}>
+  {
+    palette().map((p, index) => {
+      return (
+        <div key={index} style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr 1fr',
+          gap: '1rem',
+        }}>
+          {
+            p.map((pColor) => {
+              console.log(pColor)
+              return (
+                <div key={pColor.value} style={{
+                  border: 'solid #e5e5e5 1px',
+                }}>
+                  <div style={{
+                    padding: '4rem',
+                    backgroundColor: pColor.value,
+                    textAlign: 'center',
+                  }}>
+                    <span>{pColor.value}</span>
+                  </div>
+                  <div style={{
+                    padding: '1rem',
+                    textAlign: 'right',
+                  }}>
+                    <span style={{fontWeight: 'bold'}}>{pColor.attributes.item}/{pColor.attributes.subitem}</span>
+                  </div>
+                </div>
+              )
+            })
+          }
+        </div>
+      )
+    })
+  }
+</div>
