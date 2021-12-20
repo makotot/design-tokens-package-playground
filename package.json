@@ -1,6 +1,6 @@
 {
   "name": "@makotot/design-tokens-package-playground",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
