@@ -1,22 +1,22 @@
-// @ts-nocheck
-import tokens from '../../dist/tokens'
+import tokens from '../../dist/tokens.json'
 
-type BaseColorKey = keyof typeof tokens.color.base
+type ColorLevel = keyof typeof tokens.global.base.red
 
 export const palette = () => {
-  const baseColors = tokens.color.base
-  const baseColorKeys = Object.keys(baseColors) as BaseColorKey[]
+  const baseColors = tokens.global.base
+  const baseColorKeys = Object.keys(baseColors) as 'red'[]
 
   const res = baseColorKeys.map((name) => {
     const currentColor = baseColors[name]
+    const currentColorKeys = Object.keys(currentColor) as ColorLevel[]
 
-    return Object.keys(currentColor).map((currentName) => {
+    return currentColorKeys.map((currentName) => {
       return {
         attributes: currentColor[currentName].attributes,
         value: currentColor[currentName].value,
       }
     })
   })
-  console.log(res)
+  console.log({ res })
   return res
 }
