@@ -21,8 +21,7 @@
     "test": "tsc",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -o ./storybook-build/storybook",
-    "token:clean": "style-dictionary clean",
-    "token:build": "style-dictionary build --config style-dictionary.config.js",
+    "token:build": "node build-tokens.js",
     "dev": "npm run token:build & npm run storybook",
     "release": "semantic-release"
   },
