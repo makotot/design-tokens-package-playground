@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/makotot/design-tokens-package-playground/compare/v1.1.4...v1.1.5) (2021-12-21)
+
+
+### Bug Fixes
+
+* set deploy user ([ce0a5da](https://github.com/makotot/design-tokens-package-playground/commit/ce0a5da2522ac34294f269a32e4526d62e5d496a))
+
 ## [1.1.4](https://github.com/makotot/design-tokens-package-playground/compare/v1.1.3...v1.1.4) (2021-12-21)
 
 
