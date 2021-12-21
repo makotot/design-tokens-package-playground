@@ -2,7 +2,8 @@ name: Check before merging
 
 on:
   pull_request:
-    - main
+    branches:
+      - main
 
 jobs:
   release:
