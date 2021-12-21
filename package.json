@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "tsc",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -o ./storybook-build/storybook",
+    "build-storybook": "build-storybook -o ./storybook-build",
     "token:build": "node build-tokens.js",
     "dev": "npm run token:build & npm run storybook",
     "release": "semantic-release"

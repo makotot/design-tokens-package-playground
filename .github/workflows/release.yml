@@ -1,4 +1,4 @@
-name: npm publish to github package
+name: Publish to github packages
 
 on:
   push:
@@ -20,7 +20,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com
-          scope: makotot
       - run: npm ci
       - run: npm run token:build
       - run: npm run release
