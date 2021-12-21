@@ -24,10 +24,10 @@ const StyleDictionary = require('style-dictionary').extend({
           destination: 'tokens.css',
           options: {
             outputReferences: true,
-          }
-        }
-      ]
-    }
+          },
+        },
+      ],
+    },
   },
 })
 

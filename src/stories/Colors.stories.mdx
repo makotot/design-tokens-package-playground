@@ -3,54 +3,55 @@ import { palette } from './baseColors'
 
 <Meta title="Tokens/Colors" />
 
-# Colors
-
-## Base
+# COLORS
 
 <div
   style={{
+    marginTop: '1rem',
     display: 'grid',
     gap: '1rem',
     color: '#444',
   }}>
   {palette().map((p, index) => {
     return (
-      <div
+      <table
         key={index}
         style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr 1fr',
-          gap: '1rem',
+          tableLayout: 'fixed',
+          width: '100%',
         }}>
-        {p.map((pColor) => {
-          console.log(pColor)
-          return (
-            <div
-              key={pColor.value}
-              style={{
-                border: 'solid #e5e5e5 1px',
-              }}>
-              <div
-                style={{
-                  padding: '4rem',
-                  backgroundColor: pColor.value,
-                  textAlign: 'center',
-                }}>
-                <span>{pColor.value}</span>
-              </div>
-              <div
-                style={{
-                  padding: '1rem',
-                  textAlign: 'right',
-                }}>
-                <span style={{ fontWeight: 'bold' }}>
-                  {pColor.attributes.item}/{pColor.attributes.subitem}
-                </span>
-              </div>
-            </div>
-          )
-        })}
-      </div>
+        <thead>
+          <tr>
+            <th>CTI</th>
+            <th>Hex</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          {p.map((pColor) => {
+            console.log(pColor)
+            return (
+              <tr
+                key={pColor.value}
+              >
+                <td style={{fontWeight: 'bold', textTransform: 'capitalize'}}>
+                  <code>{pColor.attributes.type}/{pColor.attributes.item}/{pColor.attributes.subitem}</code>
+                </td>
+                <td><code>{pColor.value}</code></td>
+                <td>
+                  <div
+                    style={{
+                      padding: '1rem',
+                      backgroundColor: pColor.value,
+                      textAlign: 'center',
+                    }}>
+                  </div>
+                </td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
     )
   })}
 </div>
