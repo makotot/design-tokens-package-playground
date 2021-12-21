@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/makotot/design-tokens-package-playground/compare/v1.1.1...v1.1.2) (2021-12-21)
+
+
+### Bug Fixes
+
+* test ([7a122f0](https://github.com/makotot/design-tokens-package-playground/commit/7a122f00ba41aaebafa77160900debb4247e642a))
+
 ## [1.1.1](https://github.com/makotot/design-tokens-package-playground/compare/v1.1.0...v1.1.1) (2021-12-21)
 
 
