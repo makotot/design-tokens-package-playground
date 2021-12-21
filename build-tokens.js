@@ -15,6 +15,19 @@ const StyleDictionary = require('style-dictionary').extend({
         },
       ],
     },
+    css: {
+      buildPath: 'dist/',
+      transformGroup: 'css',
+      files: [
+        {
+          format: 'css/variables',
+          destination: 'tokens.css',
+          options: {
+            outputReferences: true,
+          }
+        }
+      ]
+    }
   },
 })
 
