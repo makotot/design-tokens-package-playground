@@ -2,18 +2,6 @@
   "name": "@makotot-playground/design-tokens-package-playground",
   "version": "1.2.0",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.0.3",
-    "@types/node": "^16.11.14",
-    "@types/react": "^17.0.37",
-    "@types/react-dom": "^17.0.11",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "typescript": "^4.5.4",
-    "web-vitals": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,6 +13,13 @@
     "dev": "npm run token:build & npm run storybook",
     "release": "semantic-release"
   },
+  "main": "lib/tokens.js",
+  "types": "lib/tokens.d.ts",
+  "files": [
+    "lib",
+    "package.json",
+    "CHANGELOG.md"
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -54,6 +49,18 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.14",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "typescript": "^4.5.4",
+    "web-vitals": "^2.1.2",
     "@storybook/addon-actions": "^6.4.9",
     "@storybook/addon-essentials": "^6.4.9",
     "@storybook/addon-links": "^6.4.9",
