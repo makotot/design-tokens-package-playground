@@ -1,22 +1,22 @@
 const StyleDictionary = require('style-dictionary').extend({
   source: ['./tokens.json'],
   platforms: {
-    json: {
-      buildPath: 'dist/',
+    js: {
+      buildPath: 'lib/',
       transforms: ['attribute/cti'],
       files: [
         {
-          format: 'json',
-          destination: 'tokens.json',
+          format: 'javascript/module',
+          destination: 'tokens.js',
         },
         {
-          format: 'custom/json-as-const',
-          destination: 'tokens.json.d.ts',
+          format: 'custom/javascript/typescript-definition',
+          destination: 'tokens.d.ts',
         },
       ],
     },
     css: {
-      buildPath: 'dist/',
+      buildPath: 'lib/',
       transformGroup: 'css',
       files: [
         {
@@ -32,7 +32,7 @@ const StyleDictionary = require('style-dictionary').extend({
 })
 
 StyleDictionary.registerFormat({
-  name: 'custom/json-as-const',
+  name: 'custom/javascript/typescript-definition',
   formatter: ({ dictionary, platform, options, file }) => {
     return `declare const tokens: ${JSON.stringify(
       dictionary.tokens,
