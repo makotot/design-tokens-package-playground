@@ -1,8 +1,7 @@
 {
   "name": "@makotot-playground/design-tokens-package-playground",
-  "version": "1.2.0",
-  "dependencies": {
-  },
+  "version": "1.2.1",
+  "dependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
