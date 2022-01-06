@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/makotot/design-tokens-package-playground/compare/v3.0.0...v3.0.1) (2022-01-06)
+
+
+### Bug Fixes
+
+* fix color key ([46f067a](https://github.com/makotot/design-tokens-package-playground/commit/46f067a5aefeac566d36ccf95b399229574bdaa3))
+
 # [3.0.0](https://github.com/makotot/design-tokens-package-playground/compare/v2.0.0...v3.0.0) (2022-01-06)
 
 

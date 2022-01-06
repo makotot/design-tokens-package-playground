@@ -1,6 +1,6 @@
 {
   "name": "@makotot-playground/design-tokens-package-playground",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
