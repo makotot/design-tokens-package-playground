@@ -1,3 +1,13 @@
+# [2.0.0](https://github.com/makotot/design-tokens-package-playground/compare/v1.2.1...v2.0.0) (2022-01-06)
+
+
+* Merge pull request #11 from makotot/flow-type ([58e9fa0](https://github.com/makotot/design-tokens-package-playground/commit/58e9fa03bac5e38e9f0161d0ab25f91e426f66ff)), closes [#11](https://github.com/makotot/design-tokens-package-playground/issues/11)
+
+
+### BREAKING CHANGES
+
+* remove css & add flowtype
+
 ## [1.2.1](https://github.com/makotot/design-tokens-package-playground/compare/v1.2.0...v1.2.1) (2021-12-24)
 
 
