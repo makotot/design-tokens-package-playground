@@ -1,4 +1,7 @@
-const StyleDictionary = require('style-dictionary').extend({
+const sd = require('style-dictionary')
+const {compiler, beautify} = require('flowgen')
+
+const StyleDictionary = sd.extend({
   source: ['./tokens.json'],
   platforms: {
     js: {
@@ -13,32 +16,36 @@ const StyleDictionary = require('style-dictionary').extend({
           format: 'custom/javascript/typescript-definition',
           destination: 'tokens.d.ts',
         },
-      ],
-    },
-    css: {
-      buildPath: 'lib/',
-      transformGroup: 'css',
-      files: [
         {
-          format: 'css/variables',
-          destination: 'tokens.css',
-          options: {
-            outputReferences: true,
-          },
+          format: 'custom/javascript/flowtype-definition',
+          destination: 'tokens.js.flow',
         },
       ],
     },
   },
 })
 
+const generateTSTypeDefinition = (tokens) => {
+  return `declare const tokens: ${JSON.stringify(
+    tokens,
+    null,
+    2
+  )}; export default tokens;`
+}
+
 StyleDictionary.registerFormat({
   name: 'custom/javascript/typescript-definition',
   formatter: ({ dictionary, platform, options, file }) => {
-    return `declare const tokens: ${JSON.stringify(
-      dictionary.tokens,
-      null,
-      2
-    )}; export default tokens;`
+    return generateTSTypeDefinition(dictionary.tokens)
+  },
+})
+StyleDictionary.registerFormat({
+  name: 'custom/javascript/flowtype-definition',
+  formatter: ({ dictionary, platform, options, file }) => {
+    const tsTypeDefinition = generateTSTypeDefinition(dictionary.tokens)
+    const flowdefinition = compiler.compileDefinitionString(tsTypeDefinition);
+
+    return beautify(flowdefinition)
   },
 })
 
