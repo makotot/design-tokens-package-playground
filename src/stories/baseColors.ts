@@ -1,14 +1,14 @@
-import tokens from '../../dist/tokens.json'
+import tokens from '../../lib/tokens'
 
-type ColorLevel = keyof typeof tokens.global.base.red
+const getTypedObjectKeys = <T>(obj: T) => Object.keys(obj) as Array<keyof typeof obj>
 
 export const palette = () => {
-  const baseColors = tokens.global.base
-  const baseColorKeys = Object.keys(baseColors) as 'red'[]
+  const baseColors = tokens.global.color.base
+  const baseColorKeys = getTypedObjectKeys(baseColors)
 
   const res = baseColorKeys.map((name) => {
     const currentColor = baseColors[name]
-    const currentColorKeys = Object.keys(currentColor) as ColorLevel[]
+    const currentColorKeys = getTypedObjectKeys(currentColor)
 
     return currentColorKeys.map((currentName) => {
       return {
