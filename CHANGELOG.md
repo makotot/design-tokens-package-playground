@@ -1,3 +1,13 @@
+# [3.0.0](https://github.com/makotot/design-tokens-package-playground/compare/v2.0.0...v3.0.0) (2022-01-06)
+
+
+* Merge pull request #12 from makotot/add-color-key ([d2becd3](https://github.com/makotot/design-tokens-package-playground/commit/d2becd3e55e4846439f331a8a18d71894693d457)), closes [#12](https://github.com/makotot/design-tokens-package-playground/issues/12)
+
+
+### BREAKING CHANGES
+
+* add color key
+
 # [2.0.0](https://github.com/makotot/design-tokens-package-playground/compare/v1.2.1...v2.0.0) (2022-01-06)
 
 
